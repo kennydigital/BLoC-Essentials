@@ -8,7 +8,7 @@ This is the base project to use during BLoC Pattern exercises
 2. Removed all the unecessary boiler plate comments, and counter stuff out of the flutter_base project that we won't use
 
 
-Exercise #1
+Exercise #1 -- shell
 
 
 1. Add a counter_cubit (leverage the vs code plugin)
@@ -17,4 +17,11 @@ b. Add the  counterValue state we care about to CounterState
 c. Add CounterState constructor  and make counterValue required property
 d. Modify counter_cubit constructor to initialize it's state
 e. Add two methods increment decrement to do something with the cubit state
+
+Exercise #2 -- getting it alive
+
+Modify main.dart to introduce BlocProvider and BlocBuilder
+1. Wrap home widget, with BlocProvider<CounterCubit>
+2. Modify  fab on press methods with the necessary CounterCubit increment, decrement methods
+3. Modify  Text widget, by wrapping with BlocBuilder passing state, and writing out state.counterValue
 
