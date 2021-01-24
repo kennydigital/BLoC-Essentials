@@ -25,3 +25,20 @@ Exercise #2 -- bringing it to life
 - Modify  fab on press methods with the necessary CounterCubit increment, decrement methods i.e. BlocProvider.of<CounterCubit>(context).increment()     
 - Wrap the  Text widget BlocBuilder<CounterCubit, CounterState> so we can print out state in the Text widget
 
+Exercise #3 -- introduce BlocConsumer 
+- listener: (context, state)
+- builder: (context, state)
+
+Exercise #4 - get app to use states with routes
+- Introduced some sanity with our folder structure, created:
+- lib\logic\cubit -- to hold our bloc's
+- lib\presentation\screens -- to hold our screens
+- lib\presentation\router -- to hold our routing
+
+Refactored main.dart 
+- renamed MyHomePage to HomeScreen from Exercise #2
+- moved HomeScreen to \presentation\screens
+- duplicate HomeScreen to \presentation\screens\second_screen
+- added presentation\router\app_router.dart
+- cleaned up main.dart now to just use routes ( onGenerateRoute: _appRouter.onGenerateRoute)
+-
